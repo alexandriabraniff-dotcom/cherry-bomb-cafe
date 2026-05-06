@@ -407,30 +407,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Getting here */}
-              <div className="border-t border-[#d4c4a0] pt-6 flex gap-4">
-                <span className="text-[#8B1A1A] text-lg flex-shrink-0 mt-0.5 font-[family-name:var(--font-cormorant)]">✦</span>
-                <div>
-                  <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#1A1612] mb-3">Getting Here</h3>
-                  <div className="flex flex-col gap-2.5 text-sm text-[#5a4a3a] font-[family-name:var(--font-lora)] leading-relaxed">
-                    <p><strong className="font-semibold text-[#1A1612]">By Car:</strong> ~20 min from Adelaide CBD via the M1 South Eastern Freeway. Take the Piccadilly exit, follow Lobethal Rd to no. 253.</p>
-                    <p><strong className="font-semibold text-[#1A1612]">By Bus:</strong> Route 821 (LinkSA) from Stop K1, Hutt St, CBD — ~31 min, ~$3. Runs Mon–Fri only.</p>
-                  </div>
-                  <Link href="/local-transport"
-                    className="inline-block mt-3 font-[family-name:var(--font-lora)] text-xs text-[#8B1A1A] border-b border-[#8B1A1A]/40 hover:border-[#8B1A1A] transition-colors">
-                    Full transport guide →
-                  </Link>
-                </div>
-              </div>
-
-              <a
-                href="https://maps.google.com/?q=253+Lobethal+Rd+Ashton+SA+5137"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-[#8B1A1A] text-[#F1E8D4] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#A52A2A] transition-colors rounded-sm w-fit"
-              >
-                Open in Google Maps
-              </a>
             </div>
           </div>
         </div>
