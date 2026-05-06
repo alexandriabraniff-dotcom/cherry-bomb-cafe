@@ -94,24 +94,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Instagram CTA */}
-      <section className="py-16 px-6 bg-[#EDE3CC] text-center">
-        <span className="block w-14 h-0.5 bg-[#8B1A1A] mx-auto mb-6" />
-        <h2 className="font-[family-name:var(--font-cormorant)] text-3xl font-bold text-[#1A1612] mb-4">
-          Follow along on Instagram
-        </h2>
-        <p className="text-[#5a4a3a] mb-6 leading-relaxed">
-          We share daily specials, behind-the-scenes moments, and seasonal inspiration.
-        </p>
-        <a
-          href="https://www.instagram.com/cherry_bomb_cafe_ashton"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-8 py-3 border border-[#8B1A1A] text-[#8B1A1A] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#8B1A1A] hover:text-[#F1E8D4] transition-colors rounded-sm"
-        >
-          @cherry_bomb_cafe_ashton
-        </a>
-      </section>
     </>
   );
 }

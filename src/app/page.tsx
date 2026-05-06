@@ -143,16 +143,13 @@ export default function HomePage() {
           {/* ── ROW 2: Our Team ───────────────────────────────── */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-            {/* Image slot 2 */}
+            {/* Image slot 2 — photo coming soon */}
             <div className="relative order-2 lg:order-1">
-              <Image
-                src="/images/library-fireplace.png"
-                alt="The cosy library nook at Cherry Bomb Cafe with a glowing fireplace and bookshelves"
-                width={680}
-                height={500}
-                className="w-full h-[440px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
-              />
-              <div className="absolute -bottom-3 -left-3 w-28 h-28 border border-[#8B1A1A]/20 rounded-sm hidden lg:block pointer-events-none" />
+              <div className="w-full h-[440px] rounded-sm bg-[#EDE3CC] border border-dashed border-[#c4b48a] flex items-center justify-center">
+                <p className="font-[family-name:var(--font-cormorant)] text-xl text-[#a09070] italic">
+                  Photo coming soon
+                </p>
+              </div>
             </div>
 
             {/* Text */}
@@ -181,67 +178,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section transition — quote strip */}
-      <div className="bg-[#8B1A1A] py-10 px-6 text-center">
-        <p className="font-[family-name:var(--font-cormorant)] italic text-2xl md:text-3xl text-[#F1E8D4] max-w-2xl mx-auto leading-snug">
-          &ldquo;Hand-baked daily, by people who love to feed you.&rdquo;
-        </p>
-      </div>
 
       {/* ══════════════════════════════════════════════════════
           MENU
       ══════════════════════════════════════════════════════ */}
       <section id="menu" className="scroll-mt-0 bg-[#EDE3CC]">
-        <div className="max-w-7xl mx-auto px-6 py-28">
+        <div className="max-w-3xl mx-auto px-6 py-28 text-center">
           <SectionHeader script="Simple, wholesome & seasonal" heading="Our Menu" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-            {/* Write-up */}
-            <div className="flex flex-col gap-5">
-              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                Our rustic homestyle menu seeks to combine the best of local produce from the
-                iconic Piccadilly Valley region. From our Kindred Coffee Blend to our house-made
-                cakes and toasties, we have something for everyone.
-              </p>
-              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                We keep the menu simple, wholesome and seasonal &mdash; and our specials often
-                include donations from local townsfolk.
-              </p>
-              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                Our signature <span className="font-semibold text-[#8B1A1A]">Cherry Pie</span> is
-                absolutely something not to be missed.
-              </p>
-
-              {/* Coming soon badge */}
-              <div className="mt-4 inline-flex items-center gap-3 border border-[#c4b48a] rounded-sm px-5 py-4 bg-[#F1E8D4]/70 w-fit">
-                <span className="text-[#8B1A1A] font-[family-name:var(--font-cormorant)] text-lg">✦</span>
-                <div>
-                  <p className="font-[family-name:var(--font-cormorant)] text-base font-bold text-[#1A1612]">
-                    Full menu coming soon
-                  </p>
-                  <p className="font-[family-name:var(--font-lora)] text-xs text-[#6a5a4a] mt-0.5">
-                    Call us on{" "}
-                    <a href="tel:0413516920" className="text-[#8B1A1A] hover:underline">
-                      0413 516 920
-                    </a>{" "}
-                    for today&rsquo;s specials
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Image */}
-            <div className="relative">
-              <Image
-                src="/images/baker.png"
-                alt="Cherry Bomb Cafe team member slicing fresh bread with dried florals hanging overhead"
-                width={680}
-                height={500}
-                className="w-full h-[440px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
-              />
-              <div className="absolute -bottom-3 -right-3 w-28 h-28 border border-[#8B1A1A]/20 rounded-sm hidden lg:block pointer-events-none" />
-            </div>
+          <div className="flex flex-col gap-5">
+            <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+              Our rustic homestyle menu seeks to combine the best of local produce from the
+              iconic Piccadilly Valley region. From our Kindred Coffee Blend to our house-made
+              cakes and toasties, we have something for everyone.
+            </p>
+            <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+              We keep the menu simple, wholesome and seasonal &mdash; and our specials often
+              include donations from local townsfolk.
+            </p>
+            <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+              Our signature <span className="font-semibold text-[#8B1A1A]">Cherry Pie</span> is
+              absolutely something not to be missed.
+            </p>
+            <p className="font-[family-name:var(--font-lora)] italic text-[#8B1A1A] mt-4">
+              We will be posting our menu soon.
+            </p>
           </div>
         </div>
       </section>
@@ -250,83 +211,44 @@ export default function HomePage() {
           HOURS
       ══════════════════════════════════════════════════════ */}
       <section id="hours" className="scroll-mt-0 bg-[#2D4A35]">
-        <div className="max-w-7xl mx-auto px-6 py-28">
+        <div className="max-w-2xl mx-auto px-6 py-28">
           <SectionHeader script="We'll have the kettle on" heading="Trading Hours" light />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-4xl mx-auto">
-            {/* Hours table */}
-            <div className="bg-[#F1E8D4]/10 border border-[#F1E8D4]/15 rounded-sm overflow-hidden">
-              {[
-                { day: "Monday", time: "Closed" },
-                { day: "Tuesday", time: "Closed" },
-                { day: "Wednesday", time: "8:00 am — 3:00 pm" },
-                { day: "Thursday", time: "8:00 am — 3:00 pm" },
-                { day: "Friday", time: "8:00 am — 3:00 pm" },
-                { day: "Saturday", time: "8:00 am — 3:00 pm" },
-                { day: "Sunday", time: "8:00 am — 3:00 pm" },
-              ].map((row, i, arr) => (
-                <div
-                  key={row.day}
-                  className={`flex justify-between items-center px-7 py-4 ${
-                    i !== arr.length - 1 ? "border-b border-[#F1E8D4]/10" : ""
-                  } ${row.time === "Closed" ? "opacity-35" : ""}`}
-                >
-                  <span className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#F1E8D4]">
-                    {row.day}
-                  </span>
-                  <span
-                    className={`font-[family-name:var(--font-lora)] text-sm ${
-                      row.time === "Closed"
-                        ? "text-[#A8B89A] italic"
-                        : "text-[#E8A547] font-medium"
-                    }`}
-                  >
-                    {row.time}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Notes */}
-            <div className="flex flex-col gap-6">
-              {[
-                {
-                  title: "Walk-ins Only",
-                  body: "We don't take bookings — just come as you are. Our doors are open from Wednesday through Sunday.",
-                },
-                {
-                  title: "Public Holidays",
-                  body: "We close on public holidays. Check our Instagram for any special hours or seasonal closures.",
-                },
-                {
-                  title: "Kitchen Hours",
-                  body: "Food served all day. Kitchen closes 30 minutes before we do. Last coffee 15 minutes before close.",
-                },
-              ].map((note) => (
-                <div key={note.title} className="flex gap-4">
-                  <span className="text-[#E8A547] text-lg mt-0.5 flex-shrink-0 font-[family-name:var(--font-cormorant)]">
-                    ✦
-                  </span>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-cormorant)] text-lg font-bold text-[#F1E8D4] mb-1">
-                      {note.title}
-                    </h3>
-                    <p className="font-[family-name:var(--font-lora)] text-sm text-[#A8B89A] leading-relaxed">
-                      {note.body}
-                    </p>
-                  </div>
-                </div>
-              ))}
-
-              <a
-                href="https://www.instagram.com/cherry_bomb_cafe_ashton"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-2 px-7 py-3 border border-[#E8A547] text-[#E8A547] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#E8A547]/10 transition-colors rounded-sm w-fit"
+          <div className="bg-[#F1E8D4]/10 border border-[#F1E8D4]/15 rounded-sm overflow-hidden">
+            {[
+              { day: "Monday", time: "Closed" },
+              { day: "Tuesday", time: "Closed" },
+              { day: "Wednesday", time: "8:00 am — 3:00 pm" },
+              { day: "Thursday", time: "8:00 am — 3:00 pm" },
+              { day: "Friday", time: "8:00 am — 3:00 pm" },
+              { day: "Saturday", time: "8:00 am — 3:00 pm" },
+              { day: "Sunday", time: "8:00 am — 3:00 pm" },
+            ].map((row, i, arr) => (
+              <div
+                key={row.day}
+                className={`flex justify-between items-center px-8 py-5 ${
+                  i !== arr.length - 1 ? "border-b border-[#F1E8D4]/10" : ""
+                } ${row.time === "Closed" ? "opacity-35" : ""}`}
               >
-                Follow for Updates
-              </a>
-            </div>
+                <span className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#F1E8D4]">
+                  {row.day}
+                </span>
+                <span className={`font-[family-name:var(--font-lora)] text-sm ${
+                  row.time === "Closed" ? "text-[#A8B89A] italic" : "text-[#E8A547] font-medium"
+                }`}>
+                  {row.time}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-col gap-2 text-center">
+            <p className="font-[family-name:var(--font-lora)] text-sm text-[#A8B89A]">
+              Closed on public holidays &middot; No bookings — walk-ins only
+            </p>
+            <p className="font-[family-name:var(--font-lora)] text-sm text-[#A8B89A]">
+              Kitchen closes 30 min before close &middot; Last coffee 15 min before close
+            </p>
           </div>
         </div>
       </section>
@@ -361,9 +283,14 @@ export default function HomePage() {
                 <span className="text-[#8B1A1A] text-lg flex-shrink-0 mt-0.5 font-[family-name:var(--font-cormorant)]">✦</span>
                 <div>
                   <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#1A1612] mb-1.5">Address</h3>
-                  <address className="not-italic font-[family-name:var(--font-lora)] text-[#3a2e24] text-sm leading-relaxed">
-                    253 Lobethal Rd<br />Ashton SA 5137<br />Adelaide Hills, South Australia
-                  </address>
+                  <a
+                    href="https://maps.google.com/?q=253+Lobethal+Rd+Ashton+SA+5137"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="not-italic font-[family-name:var(--font-lora)] text-[#3a2e24] text-sm hover:text-[#8B1A1A] transition-colors underline-offset-2 hover:underline"
+                  >
+                    253 Lobethal Rd, Ashton SA 5137
+                  </a>
                 </div>
               </div>
 
