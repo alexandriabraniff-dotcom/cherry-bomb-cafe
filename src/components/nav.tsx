@@ -23,7 +23,7 @@ const allLinks = [...leftLinks, ...rightLinks];
 /* Nav bar strip height in px — links sit centred inside this */
 const BAR_H = 56;
 /* Logo diameter */
-const LOGO_SIZE = 122;
+const LOGO_SIZE = 107;
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
