@@ -6,16 +6,16 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const leftLinks = [
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/local-transport", label: "Local Transport" },
+  { href: "/#about", label: "About" },
+  { href: "/#menu", label: "Menu" },
+  { href: "/#hours", label: "Hours" },
+  { href: "/#find-us", label: "Find Us" },
 ];
 
 const rightLinks = [
-  { href: "/menu", label: "Menu" },
+  { href: "/services", label: "Services" },
+  { href: "/local-transport", label: "Local Transport" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/hours", label: "Hours" },
-  { href: "/find-us", label: "Find Us" },
 ];
 
 const allLinks = [...leftLinks, ...rightLinks];
