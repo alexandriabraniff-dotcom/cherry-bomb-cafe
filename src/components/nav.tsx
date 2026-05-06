@@ -14,7 +14,7 @@ const leftLinks = [
 
 const rightLinks = [
   { href: "/services", label: "Services" },
-  { href: "/local-transport", label: "Local Transport" },
+  { href: "/local-townsfolk", label: "Local Townsfolk" },
   { href: "/gallery", label: "Gallery" },
 ];
 

@@ -2,84 +2,65 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "/about", label: "About" },
+  { href: "/#about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/local-transport", label: "Local Transport" },
+  { href: "/local-townsfolk", label: "Local Townsfolk" },
   { href: "/menu", label: "Menu" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/hours", label: "Hours" },
-  { href: "/find-us", label: "Find Us" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-[#2D4A35] text-[#EDE3CC]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Brand */}
-          <div className="flex flex-col gap-4">
-            <Image
-              src="/images/logo.jpg"
-              alt="Cherry Bomb Cafe"
-              width={80}
-              height={80}
-              className="h-16 w-auto object-contain brightness-[0.9] saturate-[0.8]"
-            />
-            <p className="text-[#A8B89A] text-sm leading-relaxed max-w-xs">
-              A little cafe in the Adelaide Hills, blooming year-round.
-            </p>
-            <p className="font-[family-name:var(--font-pinyon)] text-3xl text-[#E8A547] mt-2">
-              Cherry Bomb Cafe
-            </p>
-          </div>
+      <div className="max-w-5xl mx-auto px-6 py-20 flex flex-col items-center text-center gap-10">
 
-          {/* Navigation */}
-          <div>
-            <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#F1E8D4] mb-5">
-              Explore
-            </h3>
-            <ul className="flex flex-col gap-2.5">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-[#A8B89A] text-sm hover:text-[#E8A547] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Logo */}
+        <Image
+          src="/images/logo.png"
+          alt="Cherry Bomb Cafe"
+          width={160}
+          height={160}
+          className="object-contain"
+        />
 
-          {/* Contact */}
-          <div>
-            <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#F1E8D4] mb-5">
-              Visit Us
-            </h3>
-            <address className="not-italic text-[#A8B89A] text-sm flex flex-col gap-2.5">
-              <span>253 Lobethal Rd<br />Ashton SA 5137</span>
-              <span>Adelaide Hills, South Australia</span>
-              <a
-                href="tel:0413516920"
-                className="hover:text-[#E8A547] transition-colors"
-              >
-                0413 516 920
-              </a>
-              <a
-                href="https://www.instagram.com/cherry_bomb_cafe_ashton"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#E8A547] transition-colors"
-                aria-label="Cherry Bomb Cafe on Instagram"
-              >
-                @cherry_bomb_cafe_ashton
-              </a>
-            </address>
-          </div>
+        {/* Name + tagline */}
+        <div className="flex flex-col items-center gap-3">
+          <p className="font-[family-name:var(--font-pinyon)] text-5xl text-[#E8A547]">
+            Cherry Bomb Cafe
+          </p>
+          <p className="text-[#A8B89A] text-sm leading-relaxed tracking-wide">
+            A little cafe in the Adelaide Hills,
+          </p>
+          <p className="text-[#A8B89A] text-sm leading-relaxed tracking-wide">
+            blooming year-round.
+          </p>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-[#1F3A2A] flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#6a8a6a]">
+        {/* Address */}
+        <a
+          href="https://maps.google.com/?q=253+Lobethal+Rd+Ashton+SA+5137"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#A8B89A] text-sm hover:text-[#E8A547] transition-colors tracking-wide"
+        >
+          253 Lobethal Rd, Ashton SA 5137
+        </a>
+
+        {/* Nav links */}
+        <nav className="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-[#A8B89A] text-xs tracking-widest uppercase hover:text-[#E8A547] transition-colors font-[family-name:var(--font-lora)]"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Divider + copyright */}
+        <div className="w-full border-t border-[#1F3A2A] pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-[#6a8a6a]">
           <p>&copy; {new Date().getFullYear()} Cherry Bomb Cafe. All rights reserved.</p>
           <p>
             Website by{" "}
@@ -91,6 +72,7 @@ export default function Footer() {
             </a>
           </p>
         </div>
+
       </div>
     </footer>
   );

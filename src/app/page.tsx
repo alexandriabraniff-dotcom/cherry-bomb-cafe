@@ -129,7 +129,6 @@ export default function HomePage() {
                 height={500}
                 className="w-full h-[440px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
               />
-              <div className="absolute -bottom-3 -right-3 w-28 h-28 border border-[#8B1A1A]/20 rounded-sm hidden lg:block pointer-events-none" />
             </div>
           </div>
 
