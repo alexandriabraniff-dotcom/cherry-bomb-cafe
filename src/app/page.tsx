@@ -189,32 +189,59 @@ export default function HomePage() {
       </div>
 
       {/* ══════════════════════════════════════════════════════
-          MENU  (blank — coming soon)
+          MENU
       ══════════════════════════════════════════════════════ */}
       <section id="menu" className="scroll-mt-0 bg-[#EDE3CC]">
         <div className="max-w-7xl mx-auto px-6 py-28">
           <SectionHeader script="Simple, wholesome & seasonal" heading="Our Menu" />
 
-          {/* Placeholder */}
-          <div className="max-w-2xl mx-auto flex flex-col items-center gap-6 text-center py-16 border border-dashed border-[#c4b48a] rounded-sm bg-[#F1E8D4]/60">
-            <span className="font-[family-name:var(--font-pinyon)] text-5xl text-[#8B1A1A]">
-              Coming Soon
-            </span>
-            <p className="font-[family-name:var(--font-lora)] text-[#5a4a3a] leading-relaxed max-w-md">
-              Our full menu will be here shortly. In the meantime, feel free to call us on{" "}
-              <a href="tel:0413516920" className="text-[#8B1A1A] hover:underline">
-                0413 516 920
-              </a>{" "}
-              or follow us on Instagram for daily specials.
-            </p>
-            <a
-              href="https://www.instagram.com/cherry_bomb_cafe_ashton"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-[#8B1A1A] text-[#F1E8D4] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#A52A2A] transition-colors rounded-sm"
-            >
-              @cherry_bomb_cafe_ashton
-            </a>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Write-up */}
+            <div className="flex flex-col gap-5">
+              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+                Our rustic homestyle menu seeks to combine the best of local produce from the
+                iconic Piccadilly Valley region. From our Kindred Coffee Blend to our house-made
+                cakes and toasties, we have something for everyone.
+              </p>
+              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+                We keep the menu simple, wholesome and seasonal &mdash; and our specials often
+                include donations from local townsfolk.
+              </p>
+              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+                Our signature <span className="font-semibold text-[#8B1A1A]">Cherry Pie</span> is
+                absolutely something not to be missed.
+              </p>
+
+              {/* Coming soon badge */}
+              <div className="mt-4 inline-flex items-center gap-3 border border-[#c4b48a] rounded-sm px-5 py-4 bg-[#F1E8D4]/70 w-fit">
+                <span className="text-[#8B1A1A] font-[family-name:var(--font-cormorant)] text-lg">✦</span>
+                <div>
+                  <p className="font-[family-name:var(--font-cormorant)] text-base font-bold text-[#1A1612]">
+                    Full menu coming soon
+                  </p>
+                  <p className="font-[family-name:var(--font-lora)] text-xs text-[#6a5a4a] mt-0.5">
+                    Call us on{" "}
+                    <a href="tel:0413516920" className="text-[#8B1A1A] hover:underline">
+                      0413 516 920
+                    </a>{" "}
+                    for today&rsquo;s specials
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative">
+              <Image
+                src="/images/baker.png"
+                alt="Cherry Bomb Cafe team member slicing fresh bread with dried florals hanging overhead"
+                width={680}
+                height={500}
+                className="w-full h-[440px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
+              />
+              <div className="absolute -bottom-3 -right-3 w-28 h-28 border border-[#8B1A1A]/20 rounded-sm hidden lg:block pointer-events-none" />
+            </div>
           </div>
         </div>
       </section>
