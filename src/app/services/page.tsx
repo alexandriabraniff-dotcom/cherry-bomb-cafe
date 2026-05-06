@@ -14,8 +14,8 @@ export default function ServicesPage() {
       {/* Header */}
       <section className="relative h-[380px] overflow-hidden flex items-center justify-center">
         <Image
-          src="/images/counter-florals.png"
-          alt="The beautiful Cherry Bomb Cafe counter with dried flowers overhead"
+          src="/images/garden.png"
+          alt="The lush fern garden path leading to Cherry Bomb Cafe in Ashton"
           fill
           className="object-cover object-center"
           priority

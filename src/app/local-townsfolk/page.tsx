@@ -42,8 +42,8 @@ export default function LocalTownsfolkPage() {
       {/* Header */}
       <section className="relative h-[380px] overflow-hidden flex items-center justify-center">
         <Image
-          src="/images/library-fireplace.png"
-          alt="The cosy library nook at Cherry Bomb Cafe"
+          src="/images/garden.png"
+          alt="The lush fern garden path leading to Cherry Bomb Cafe in Ashton"
           fill
           className="object-cover object-center"
           priority
