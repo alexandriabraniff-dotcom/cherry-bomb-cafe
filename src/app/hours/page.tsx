@@ -21,7 +21,7 @@ export default function HoursPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative h-64 overflow-hidden flex items-center justify-center">
+      <section className="relative h-[380px] overflow-hidden flex items-center justify-center">
         <Image
           src="/images/espresso-machine.png"
           alt="La Marzocco espresso machine at Cherry Bomb Cafe"
@@ -30,7 +30,7 @@ export default function HoursPage() {
           priority
         />
         <div className="absolute inset-0 bg-[#1A1612]/65" />
-        <div className="relative z-10 text-center">
+        <div className="relative z-10 text-center pt-28">
           <p className="font-[family-name:var(--font-pinyon)] text-5xl text-[#E8A547] mb-2">
             We&rsquo;ll have the kettle on
           </p>

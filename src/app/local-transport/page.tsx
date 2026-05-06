@@ -12,7 +12,7 @@ export default function LocalTransportPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative h-64 overflow-hidden flex items-center justify-center">
+      <section className="relative h-[380px] overflow-hidden flex items-center justify-center">
         <Image
           src="/images/garden.png"
           alt="The scenic garden approach to Cherry Bomb Cafe in Ashton"
@@ -21,7 +21,7 @@ export default function LocalTransportPage() {
           priority
         />
         <div className="absolute inset-0 bg-[#1A1612]/60" />
-        <div className="relative z-10 text-center">
+        <div className="relative z-10 text-center pt-28">
           <p className="font-[family-name:var(--font-pinyon)] text-5xl text-[#E8A547] mb-2">
             The journey is part of the experience
           </p>

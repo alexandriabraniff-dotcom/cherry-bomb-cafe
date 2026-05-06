@@ -84,9 +84,9 @@ export default function Nav() {
             <Image
               src="/images/logo.jpg"
               alt="Cherry Bomb Cafe"
-              width={102}
-              height={102}
-              className="h-[102px] w-[102px] object-cover"
+              width={112}
+              height={112}
+              className="h-[112px] w-[112px] object-cover"
               priority
             />
           </Link>
