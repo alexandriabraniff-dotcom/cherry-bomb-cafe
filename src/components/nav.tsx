@@ -76,14 +76,17 @@ export default function Nav() {
             ))}
           </div>
 
-          {/* Center logo */}
-          <Link href="/" className="mx-10 flex-shrink-0">
+          {/* Center logo — circular on hero */}
+          <Link
+            href="/"
+            className="mx-10 flex-shrink-0 rounded-full overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.35)] ring-2 ring-[#E8A547]/40"
+          >
             <Image
               src="/images/logo.jpg"
               alt="Cherry Bomb Cafe"
-              width={100}
-              height={100}
-              className="h-20 w-auto object-contain drop-shadow-lg"
+              width={96}
+              height={96}
+              className="h-24 w-24 object-cover"
               priority
             />
           </Link>
@@ -101,13 +104,16 @@ export default function Nav() {
 
         {/* Mobile hero bar */}
         <div className="lg:hidden flex items-center justify-between px-6 py-5 pointer-events-auto">
-          <Link href="/">
+          <Link
+            href="/"
+            className="rounded-full overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)] ring-2 ring-[#E8A547]/40"
+          >
             <Image
               src="/images/logo.jpg"
               alt="Cherry Bomb Cafe"
-              width={80}
-              height={80}
-              className="h-14 w-auto object-contain drop-shadow-lg"
+              width={56}
+              height={56}
+              className="h-14 w-14 object-cover"
               priority
             />
           </Link>
