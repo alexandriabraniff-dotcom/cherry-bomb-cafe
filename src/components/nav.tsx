@@ -20,28 +20,27 @@ const rightLinks = [
 
 const allLinks = [...leftLinks, ...rightLinks];
 
+/* Nav bar strip height in px — links sit centred inside this */
+const BAR_H = 56;
+/* Logo diameter */
+const LOGO_SIZE = 122;
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const heroRef = useRef<number>(0);
 
   useEffect(() => {
-    // Measure hero height once
     const hero = document.querySelector("[data-hero]") as HTMLElement | null;
     heroRef.current = hero ? hero.offsetHeight : window.innerHeight;
-
-    const onScroll = () => {
-      setScrolled(window.scrollY > heroRef.current - 80);
-    };
+    const onScroll = () => setScrolled(window.scrollY > heroRef.current - 80);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const linkClass = (dark: boolean) =>
     `font-[family-name:var(--font-lora)] text-[0.8rem] tracking-widest uppercase relative group transition-colors duration-200 ${
-      dark
-        ? "text-[#1A1612] hover:text-[#8B1A1A]"
-        : "text-[#F1E8D4] hover:text-[#E8A547]"
+      dark ? "text-[#1A1612] hover:text-[#8B1A1A]" : "text-[#F1E8D4] hover:text-[#E8A547]"
     }`;
 
   const underline = (dark: boolean) =>
@@ -51,7 +50,9 @@ export default function Nav() {
 
   return (
     <>
-      {/* ── HERO NAV — transparent, always visible ──────────── */}
+      {/* ══════════════════════════════════════════════════════
+          HERO NAV — transparent overlay, always present
+      ══════════════════════════════════════════════════════ */}
       <header className="absolute top-0 left-0 right-0 z-40 pointer-events-none">
         {/* Creator banner */}
         <div className="bg-[#8B1A1A]/80 text-[#F1E8D4] text-center text-xs py-1.5 px-4 pointer-events-auto">
@@ -61,12 +62,11 @@ export default function Nav() {
           </a>
         </div>
 
-        {/* Split nav */}
+        {/* Desktop split nav */}
         <nav
           className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center px-10 py-6 pointer-events-auto"
           aria-label="Main navigation"
         >
-          {/* Left links */}
           <div className="flex items-center gap-8 justify-end">
             {leftLinks.map((link) => (
               <Link key={link.href} href={link.href} className={linkClass(false)}>
@@ -76,22 +76,22 @@ export default function Nav() {
             ))}
           </div>
 
-          {/* Center logo — circular on hero */}
+          {/* Hero logo — 122px circle */}
           <Link
             href="/"
-            className="mx-10 flex-shrink-0 rounded-full overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.35)] ring-2 ring-[#E8A547]/40"
+            className="mx-10 flex-shrink-0 rounded-full overflow-hidden shadow-[0_6px_28px_rgba(0,0,0,0.4)] ring-2 ring-[#E8A547]/50"
           >
             <Image
               src="/images/logo.jpg"
               alt="Cherry Bomb Cafe"
-              width={112}
-              height={112}
-              className="h-[112px] w-[112px] object-cover"
+              width={LOGO_SIZE}
+              height={LOGO_SIZE}
+              className="block object-cover"
+              style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
               priority
             />
           </Link>
 
-          {/* Right links */}
           <div className="flex items-center gap-8 justify-start">
             {rightLinks.map((link) => (
               <Link key={link.href} href={link.href} className={linkClass(false)}>
@@ -127,20 +127,32 @@ export default function Nav() {
         </div>
       </header>
 
-      {/* ── SCROLLED NAV — slides down after hero ───────────── */}
+      {/* ══════════════════════════════════════════════════════
+          SCROLLED NAV — slides in after hero, logo hangs below bar
+      ══════════════════════════════════════════════════════ */}
       <div
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-visible ${
           scrolled
             ? "translate-y-0 opacity-100 pointer-events-auto"
             : "-translate-y-full opacity-0 pointer-events-none"
-        } bg-[#F1E8D4]/97 backdrop-blur-sm shadow-[0_2px_20px_rgba(26,22,18,0.1)]`}
+        }`}
       >
-        {/* Desktop scrolled split nav */}
+        {/* Cream background strip — fixed height, shadow lives here */}
+        <div
+          className="absolute inset-x-0 top-0 bg-[#F1E8D4]/97 backdrop-blur-sm shadow-[0_2px_20px_rgba(26,22,18,0.1)]"
+          style={{ height: BAR_H }}
+        />
+
+        {/* Desktop grid — logo overflows below the strip */}
         <nav
-          className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center px-10 py-3"
+          className="relative hidden lg:grid grid-cols-[1fr_auto_1fr] items-start px-10"
           aria-label="Scrolled navigation"
         >
-          <div className="flex items-center gap-8 justify-end">
+          {/* Left links — centred inside the BAR_H strip */}
+          <div
+            className="flex items-center gap-8 justify-end"
+            style={{ height: BAR_H }}
+          >
             {leftLinks.map((link) => (
               <Link key={link.href} href={link.href} className={linkClass(true)}>
                 {link.label}
@@ -149,18 +161,28 @@ export default function Nav() {
             ))}
           </div>
 
-          <Link href="/" className="mx-10">
+          {/* Logo — top sits inside the bar, bottom hangs below */}
+          <Link
+            href="/"
+            className="mx-10 flex-shrink-0 rounded-full overflow-hidden shadow-[0_6px_24px_rgba(26,22,18,0.25)] ring-2 ring-[#E8A547]/50"
+            style={{ marginTop: 6 }}
+          >
             <Image
               src="/images/logo.jpg"
               alt="Cherry Bomb Cafe"
-              width={80}
-              height={80}
-              className="h-12 w-auto object-contain"
+              width={LOGO_SIZE}
+              height={LOGO_SIZE}
+              className={`block object-cover`}
+              style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
               priority
             />
           </Link>
 
-          <div className="flex items-center gap-8 justify-start">
+          {/* Right links — centred inside the BAR_H strip */}
+          <div
+            className="flex items-center gap-8 justify-start"
+            style={{ height: BAR_H }}
+          >
             {rightLinks.map((link) => (
               <Link key={link.href} href={link.href} className={linkClass(true)}>
                 {link.label}
@@ -171,14 +193,22 @@ export default function Nav() {
         </nav>
 
         {/* Mobile scrolled bar */}
-        <div className="lg:hidden flex items-center justify-between px-6 py-3">
-          <Link href="/">
+        <div
+          className="relative lg:hidden flex items-center justify-between px-6"
+          style={{ height: BAR_H }}
+        >
+          <Link
+            href="/"
+            className="rounded-full overflow-hidden shadow-[0_4px_16px_rgba(26,22,18,0.2)] ring-2 ring-[#E8A547]/40"
+            style={{ marginTop: 6, flexShrink: 0 }}
+          >
             <Image
               src="/images/logo.jpg"
               alt="Cherry Bomb Cafe"
-              width={60}
-              height={60}
-              className="h-10 w-auto object-contain"
+              width={LOGO_SIZE}
+              height={LOGO_SIZE}
+              className="block object-cover"
+              style={{ width: LOGO_SIZE, height: LOGO_SIZE }}
             />
           </Link>
           <button
@@ -191,13 +221,12 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* ── MOBILE DRAWER ────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════
+          MOBILE DRAWER
+      ══════════════════════════════════════════════════════ */}
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] flex">
-          <div
-            className="flex-1 bg-[#1A1612]/40"
-            onClick={() => setMobileOpen(false)}
-          />
+          <div className="flex-1 bg-[#1A1612]/40" onClick={() => setMobileOpen(false)} />
           <div className="w-72 bg-[#EDE3CC] flex flex-col shadow-2xl">
             <div className="flex items-center justify-between px-6 py-5 border-b border-[#d4c4a0]">
               <Image
