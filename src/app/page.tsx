@@ -92,84 +92,92 @@ export default function HomePage() {
           ABOUT
       ══════════════════════════════════════════════════════ */}
       <section id="about" className="scroll-mt-0 bg-[#F1E8D4]">
-        <div className="max-w-7xl mx-auto px-6 py-28">
-          <SectionHeader script="Our Story" heading="About Cherry Bomb" />
+        <div className="max-w-7xl mx-auto px-6 py-28 flex flex-col gap-24">
 
+          {/* ── ROW 1: Our Story ──────────────────────────────── */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Image column */}
-            <div className="relative order-2 lg:order-1">
-              <Image
-                src="/images/baker.png"
-                alt="A Cherry Bomb Cafe team member in a cherry-red apron slicing warm bread with dried florals overhead"
-                width={680}
-                height={520}
-                className="w-full h-[480px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
-              />
-              {/* Decorative corner frame */}
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 border border-[#8B1A1A]/20 rounded-sm hidden lg:block pointer-events-none" />
-            </div>
 
-            {/* Text column */}
-            <div className="order-1 lg:order-2 flex flex-col gap-5">
+            {/* Text */}
+            <div className="flex flex-col gap-5">
+              <div>
+                <p className="font-[family-name:var(--font-pinyon)] text-4xl text-[#8B1A1A] mb-1">
+                  Our Story
+                </p>
+                <span className="block w-12 h-px bg-[#8B1A1A] mt-3 mb-6" />
+                <h2 className="font-[family-name:var(--font-cormorant)] text-5xl font-bold text-[#1A1612] mb-6">
+                  Where it began
+                </h2>
+              </div>
               <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
                 At Cherry Bomb Caf&eacute;, we are passionate about bringing people together over
                 delicious food and drinks. Our journey began as a small coffee shop, and we have
-                since grown into a full-service caf&eacute; with a whole lot of heart.
+                since expanded to become a full-service caf&eacute;.
               </p>
               <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                Ambiance plays a big part in how we spoil our customers &mdash; from cosy nooks and
-                velvet couches to a library, a fireplace in every room for winter, and low-level
+                Ambiance plays a big part in how we spoil our customers &mdash; from cosy nooks,
+                velvet couches, a library and a fireplace in every room for winter, and low-level
                 lighting that wraps every visit in warmth.
               </p>
-              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                We are also deeply committed to sustainability in every aspect we possibly can.
-                Because a place worth loving is worth looking after.
-              </p>
+            </div>
 
-              {/* Three pillars */}
-              <div className="grid grid-cols-3 gap-3 mt-4">
-                {[
-                  { label: "Kitchen", note: "Local & seasonal" },
-                  { label: "Coffee Bar", note: "Kindred Blend" },
-                  { label: "Front of House", note: "Warm welcome" },
-                ].map((p) => (
-                  <div
-                    key={p.label}
-                    className="flex flex-col items-center text-center p-4 bg-[#EDE3CC] rounded-sm border border-[#d4c4a0]"
-                  >
-                    <span className="text-[#8B1A1A] text-base mb-1">✦</span>
-                    <p className="font-[family-name:var(--font-cormorant)] text-sm font-bold text-[#1A1612] leading-tight">
-                      {p.label}
-                    </p>
-                    <p className="text-[10px] text-[#7a6a5a] mt-0.5">{p.note}</p>
-                  </div>
-                ))}
-              </div>
+            {/* Image slot 1 */}
+            <div className="relative">
+              <Image
+                src="/images/baker.png"
+                alt="A Cherry Bomb Cafe team member in a cherry-red apron slicing warm bread with dried florals hanging overhead"
+                width={680}
+                height={500}
+                className="w-full h-[440px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
+              />
+              <div className="absolute -bottom-3 -right-3 w-28 h-28 border border-[#8B1A1A]/20 rounded-sm hidden lg:block pointer-events-none" />
             </div>
           </div>
 
-          {/* Interior snapshot strip */}
-          <div className="grid grid-cols-3 gap-4 mt-20">
-            {[
-              { src: "/images/library-fireplace.png", alt: "The library nook with fireplace", label: "The Library" },
-              { src: "/images/interior-stools.png", alt: "Window bar with timber stools", label: "The Counter" },
-              { src: "/images/room-plants.png", alt: "Botanica room with plants and candles", label: "The Botanica Room" },
-            ].map((img) => (
-              <div key={img.label} className="relative group overflow-hidden rounded-sm">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={500}
-                  height={340}
-                  className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1612]/65 to-transparent" />
-                <p className="absolute bottom-3 left-4 font-[family-name:var(--font-cormorant)] text-base font-bold text-[#F1E8D4]">
-                  {img.label}
-                </p>
-              </div>
-            ))}
+          {/* Hairline divider */}
+          <div className="flex items-center gap-6">
+            <div className="flex-1 h-px bg-[#d4c4a0]" />
+            <span className="text-[#8B1A1A] text-lg font-[family-name:var(--font-cormorant)]">✦</span>
+            <div className="flex-1 h-px bg-[#d4c4a0]" />
           </div>
+
+          {/* ── ROW 2: Our Team ───────────────────────────────── */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Image slot 2 */}
+            <div className="relative order-2 lg:order-1">
+              <Image
+                src="/images/library-fireplace.png"
+                alt="The cosy library nook at Cherry Bomb Cafe with a glowing fireplace and bookshelves"
+                width={680}
+                height={500}
+                className="w-full h-[440px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
+              />
+              <div className="absolute -bottom-3 -left-3 w-28 h-28 border border-[#8B1A1A]/20 rounded-sm hidden lg:block pointer-events-none" />
+            </div>
+
+            {/* Text */}
+            <div className="order-1 lg:order-2 flex flex-col gap-5">
+              <div>
+                <p className="font-[family-name:var(--font-pinyon)] text-4xl text-[#8B1A1A] mb-1">
+                  Our Team
+                </p>
+                <span className="block w-12 h-px bg-[#8B1A1A] mt-3 mb-6" />
+                <h2 className="font-[family-name:var(--font-cormorant)] text-5xl font-bold text-[#1A1612] mb-6">
+                  The people behind the cup
+                </h2>
+              </div>
+              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+                Our team consists of experienced chefs and baristas who are dedicated to providing
+                the best possible experience for our customers.
+              </p>
+              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+                We are proud to have such a talented and dedicated team who also care about the
+                community they serve. We are also committed to being sustainable in every aspect
+                we possibly can.
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
 
