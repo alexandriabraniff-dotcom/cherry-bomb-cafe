@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 
 const hours = [
   { day: "Monday", time: "Closed" },
-  { day: "Tuesday", time: "8:00 am — 3:00 pm" },
+  { day: "Tuesday", time: "Closed" },
   { day: "Wednesday", time: "8:00 am — 3:00 pm" },
   { day: "Thursday", time: "8:00 am — 3:00 pm" },
   { day: "Friday", time: "8:00 am — 3:00 pm" },
-  { day: "Saturday", time: "8:00 am — 3:30 pm" },
-  { day: "Sunday", time: "8:00 am — 3:30 pm" },
+  { day: "Saturday", time: "8:00 am — 3:00 pm" },
+  { day: "Sunday", time: "8:00 am — 3:00 pm" },
 ];
 
 export default function HoursPage() {
@@ -72,16 +72,16 @@ export default function HoursPage() {
         </div>
 
         <p className="text-center text-sm text-[#6a5a4a] mt-6 leading-relaxed">
-          Hours may vary on public holidays. Please check our Instagram{" "}
+          Closed on public holidays. Walk-ins only &mdash; no bookings taken. Please check our Instagram{" "}
           <a
-            href="https://www.instagram.com/cherrybombcafe"
+            href="https://www.instagram.com/cherry_bomb_cafe_ashton"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#8B1A1A] hover:underline"
           >
-            @cherrybombcafe
+            @cherry_bomb_cafe_ashton
           </a>{" "}
-          for the latest updates.
+          for any changes.
         </p>
       </section>
 

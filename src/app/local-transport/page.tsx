@@ -92,38 +92,65 @@ export default function LocalTransportPage() {
           <div className="bg-[#EDE3CC] rounded-sm border border-[#d4c4a0] overflow-hidden">
             <div className="bg-[#2D4A35] px-8 py-5 flex items-center gap-4">
               <span className="text-[#F1E8D4] font-[family-name:var(--font-cormorant)] text-3xl font-bold">By Bus</span>
-              <span className="text-[#A8B89A] text-sm font-[family-name:var(--font-lora)]">Adelaide Metro regional services</span>
+              <span className="text-[#A8B89A] text-sm font-[family-name:var(--font-lora)]">Adelaide Metro / LinkSA — Route 821</span>
             </div>
             <div className="p-8">
               <p className="text-[#3a2e24] leading-relaxed mb-4">
-                Adelaide Metro operates regional bus services into the Hills. Bus services provide
-                a relaxed way to enjoy the scenery without worrying about parking.
+                A bus service connects Adelaide CBD to Ashton via LinkSA. A scenic and affordable
+                way to visit &mdash; sit back and enjoy the Hills scenery.
               </p>
               <div className="bg-[#F1E8D4] border border-[#d4c4a0] rounded-sm p-5 mb-5">
-                <h3 className="font-[family-name:var(--font-cormorant)] text-lg font-bold text-[#1A1612] mb-2">
-                  Route 840 — Stirling &amp; Lobethal
+                <h3 className="font-[family-name:var(--font-cormorant)] text-lg font-bold text-[#1A1612] mb-3">
+                  Route 821 — Key Details
                 </h3>
-                <p className="text-sm text-[#5a4a3a] leading-relaxed">
-                  This route services the Stirling–Lobethal corridor through the Hills, passing
-                  through or near Ashton. Services operate from Grenfell St Interchange in
-                  Adelaide CBD.
-                </p>
+                <ul className="flex flex-col gap-2 text-sm text-[#5a4a3a]">
+                  <li className="flex gap-3">
+                    <span className="text-[#8B1A1A] font-bold">Departs:</span>
+                    Stop K1, Hutt St (East side), Adelaide CBD
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#8B1A1A] font-bold">Journey:</span>
+                    Approximately 31 minutes
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#8B1A1A] font-bold">Fare:</span>
+                    Approximately $3 (Adelaide Metro MetroCard pricing)
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#8B1A1A] font-bold">Frequency:</span>
+                    Every four hours
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#8B1A1A] font-bold">Days:</span>
+                    Monday to Friday only
+                  </li>
+                </ul>
               </div>
               <div className="bg-[#fff8f0] border border-[#E8A547]/40 rounded-sm p-4 mb-5">
                 <p className="text-sm text-[#5a4a3a] leading-relaxed">
-                  <strong className="text-[#8B1A1A]">Important:</strong> Bus timetables and routes
-                  change regularly. Always check the Adelaide Metro website or app for current
-                  timetables, stop locations, and any service changes before travelling.
+                  <strong className="text-[#8B1A1A]">Weekend note:</strong> The cafe is open
+                  Wednesday–Sunday, but Route 821 runs Monday–Friday only. For weekend visits,
+                  driving or rideshare is the most practical option.
                 </p>
               </div>
-              <a
-                href="https://www.adelaidemetro.com.au"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-6 py-2.5 border border-[#2D4A35] text-[#2D4A35] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#2D4A35] hover:text-[#F1E8D4] transition-colors rounded-sm"
-              >
-                Adelaide Metro Website
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://www.adelaidemetro.com.au/plan-a-trip/regional-services/adelaide-hills-transport-services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-2.5 border border-[#2D4A35] text-[#2D4A35] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#2D4A35] hover:text-[#F1E8D4] transition-colors rounded-sm"
+                >
+                  Adelaide Metro — Hills Services
+                </a>
+                <a
+                  href="https://www.linksa.com.au"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-2.5 border border-[#2D4A35] text-[#2D4A35] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#2D4A35] hover:text-[#F1E8D4] transition-colors rounded-sm"
+                >
+                  LinkSA Website
+                </a>
+              </div>
             </div>
           </div>
 

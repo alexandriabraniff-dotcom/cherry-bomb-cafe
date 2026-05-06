@@ -57,24 +57,53 @@ export default function FindUsPage() {
                   Hours
                 </h3>
                 <p className="text-[#3a2e24] text-sm leading-relaxed">
-                  Tuesday – Friday: 8:00 am – 3:00 pm<br />
-                  Saturday – Sunday: 8:00 am – 3:30 pm<br />
-                  Monday: Closed
+                  Wednesday – Sunday: 8:00 am – 3:00 pm<br />
+                  Monday &amp; Tuesday: Closed<br />
+                  Closed on public holidays<br />
+                  <span className="text-[#6a5a4a] italic">Walk-ins only — no bookings</span>
                 </p>
+              </div>
+
+              <div>
+                <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#8B1A1A] mb-2">
+                  Phone
+                </h3>
+                <a
+                  href="tel:0413516920"
+                  className="text-[#3a2e24] text-sm hover:text-[#8B1A1A] transition-colors"
+                >
+                  0413 516 920
+                </a>
               </div>
 
               <div>
                 <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#8B1A1A] mb-2">
                   Follow Us
                 </h3>
-                <a
-                  href="https://www.instagram.com/cherrybombcafe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#3a2e24] text-sm hover:text-[#8B1A1A] transition-colors"
-                >
-                  @cherrybombcafe on Instagram
-                </a>
+                <div className="flex flex-col gap-1.5">
+                  <a
+                    href="https://www.instagram.com/cherry_bomb_cafe_ashton"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3a2e24] text-sm hover:text-[#8B1A1A] transition-colors"
+                  >
+                    Instagram: @cherry_bomb_cafe_ashton
+                  </a>
+                  <a
+                    href="https://www.facebook.com/cherrybombcafeashton"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#3a2e24] text-sm hover:text-[#8B1A1A] transition-colors"
+                  >
+                    Facebook: Cherry Bomb Cafe | Ashton SA
+                  </a>
+                  <a
+                    href="mailto:cherrybombcafe@outlook.com"
+                    className="text-[#3a2e24] text-sm hover:text-[#8B1A1A] transition-colors"
+                  >
+                    cherrybombcafe@outlook.com
+                  </a>
+                </div>
               </div>
 
               <a
@@ -121,7 +150,7 @@ export default function FindUsPage() {
               },
               {
                 title: "By Bus",
-                desc: "Adelaide Metro Route 840 (Stirling–Lobethal) services the Adelaide Hills area. Check the Adelaide Metro website for current timetables and stops. Please verify current routes before travelling.",
+                desc: "Route 821 (LinkSA) departs Stop K1, Hutt St, Adelaide CBD. Journey time ~31 min, fare ~$3. Runs Monday–Friday only — for weekend visits, driving or rideshare is recommended. Check linksa.com.au for current timetables.",
               },
               {
                 title: "Accessibility",

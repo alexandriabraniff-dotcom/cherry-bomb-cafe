@@ -104,12 +104,12 @@ export default function GalleryPage() {
           We share daily specials, behind-the-scenes moments, and seasonal inspiration.
         </p>
         <a
-          href="https://www.instagram.com/cherrybombcafe"
+          href="https://www.instagram.com/cherry_bomb_cafe_ashton"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-3 border border-[#8B1A1A] text-[#8B1A1A] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#8B1A1A] hover:text-[#F1E8D4] transition-colors rounded-sm"
         >
-          @cherrybombcafe
+          @cherry_bomb_cafe_ashton
         </a>
       </section>
     </>

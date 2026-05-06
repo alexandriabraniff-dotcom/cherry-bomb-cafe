@@ -61,13 +61,19 @@ export default function Footer() {
               <span>253 Lobethal Rd<br />Ashton SA 5137</span>
               <span>Adelaide Hills, South Australia</span>
               <a
-                href="https://www.instagram.com/cherrybombcafe"
+                href="tel:0413516920"
+                className="hover:text-[#E8A547] transition-colors"
+              >
+                0413 516 920
+              </a>
+              <a
+                href="https://www.instagram.com/cherry_bomb_cafe_ashton"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#E8A547] transition-colors"
                 aria-label="Cherry Bomb Cafe on Instagram"
               >
-                @cherrybombcafe
+                @cherry_bomb_cafe_ashton
               </a>
             </address>
           </div>
