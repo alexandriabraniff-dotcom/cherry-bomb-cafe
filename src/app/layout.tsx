@@ -59,16 +59,6 @@ export default function RootLayout({
       className={`${cormorant.variable} ${lora.variable} ${pinyon.variable}`}
     >
       <body className="min-h-screen flex flex-col">
-        {/* Creator banner */}
-        <div className="bg-[#8B1A1A] text-[#F1E8D4] text-center text-xs py-2 px-4">
-          Website created by <strong>Alexandria Braniff</strong> &mdash;{" "}
-          <a
-            href="mailto:alexandriabraniff@gmail.com"
-            className="underline hover:opacity-80"
-          >
-            alexandriabraniff@gmail.com
-          </a>
-        </div>
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
