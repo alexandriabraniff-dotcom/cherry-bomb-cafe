@@ -13,7 +13,7 @@ const leftLinks = [
 ];
 
 const rightLinks = [
-  { href: "/services", label: "Services" },
+  { href: "/about", label: "Our Story" },
   { href: "/local-townsfolk", label: "Local Townsfolk" },
   { href: "/gallery", label: "Gallery" },
 ];

@@ -109,15 +109,18 @@ export default function HomePage() {
                 </h2>
               </div>
               <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                At Cherry Bomb Caf&eacute;, we are passionate about bringing people together over
-                delicious food and drinks. Our journey began as a small coffee shop, and we have
-                since expanded to become a full-service caf&eacute;.
+                Cherry Bomb Caf&eacute; is tucked inside an 1870s stone cottage in the Adelaide
+                Hills &mdash; a place with deep roots, a 150-year-old scotch oven, and cherries
+                sourced from just down the road.
               </p>
-              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                Ambiance plays a big part in how we spoil our customers &mdash; from cosy nooks,
-                velvet couches, a library and a fireplace in every room for winter, and low-level
-                lighting that wraps every visit in warmth.
-              </p>
+              <div className="mt-2">
+                <Link
+                  href="/about"
+                  className="inline-block px-8 py-3 bg-[#8B1A1A] text-[#F1E8D4] font-[family-name:var(--font-lora)] text-sm tracking-wide hover:bg-[#A52A2A] transition-colors rounded-sm"
+                >
+                  Our Story
+                </Link>
+              </div>
             </div>
 
             {/* Image slot 1 */}
@@ -129,48 +132,6 @@ export default function HomePage() {
                 height={500}
                 className="w-full h-[440px] object-cover object-center rounded-sm shadow-[0_8px_48px_rgba(26,22,18,0.13)]"
               />
-            </div>
-          </div>
-
-          {/* Hairline divider */}
-          <div className="flex items-center gap-6">
-            <div className="flex-1 h-px bg-[#d4c4a0]" />
-            <span className="text-[#8B1A1A] text-lg font-[family-name:var(--font-cormorant)]">✦</span>
-            <div className="flex-1 h-px bg-[#d4c4a0]" />
-          </div>
-
-          {/* ── ROW 2: Our Team ───────────────────────────────── */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-            {/* Image slot 2 — photo coming soon */}
-            <div className="relative order-2 lg:order-1">
-              <div className="w-full h-[440px] rounded-sm bg-[#EDE3CC] border border-dashed border-[#c4b48a] flex items-center justify-center">
-                <p className="font-[family-name:var(--font-cormorant)] text-xl text-[#a09070] italic">
-                  Photo coming soon
-                </p>
-              </div>
-            </div>
-
-            {/* Text */}
-            <div className="order-1 lg:order-2 flex flex-col gap-5">
-              <div>
-                <p className="font-[family-name:var(--font-pinyon)] text-4xl text-[#8B1A1A] mb-1">
-                  Our Team
-                </p>
-                <span className="block w-12 h-px bg-[#8B1A1A] mt-3 mb-6" />
-                <h2 className="font-[family-name:var(--font-cormorant)] text-5xl font-bold text-[#1A1612] mb-6">
-                  The people behind the cup
-                </h2>
-              </div>
-              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                Our team consists of experienced chefs and baristas who are dedicated to providing
-                the best possible experience for our customers.
-              </p>
-              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                We are proud to have such a talented and dedicated team who also care about the
-                community they serve. We are also committed to being sustainable in every aspect
-                we possibly can.
-              </p>
             </div>
           </div>
 
