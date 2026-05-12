@@ -109,9 +109,21 @@ export default function HomePage() {
                 </h2>
               </div>
               <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
-                Cherry Bomb Caf&eacute; is tucked inside an 1870s stone cottage in the Adelaide
-                Hills &mdash; a place with deep roots, a 150-year-old scotch oven, and cherries
-                sourced from just down the road.
+                Cherry Bomb Caf&eacute; is tucked inside an 1870s stone cottage at 253 Lobethal
+                Road, Ashton &mdash; a building that has been feeding the community since Herbert
+                and Emily Lovibond ran their bakery and general store here in the 1890s. Founder
+                Tanya Schroeder purchased it in 2019 with a quiet, long-held vision: to bring it
+                back to life.
+              </p>
+              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+                At the heart of the kitchen sits a 150-year-old wood-fired scotch oven &mdash;
+                one of only a handful still in active use across Australia. It bakes every
+                sourdough loaf, pie, and pastry that leaves the kitchen, and it never turns off.
+              </p>
+              <p className="font-[family-name:var(--font-lora)] text-[#3a2e24] leading-relaxed text-[1.05rem]">
+                Our cherries come directly from Ceravolo Orchards just down the road, finding
+                their way into everything from the famous cherry pie to jams, vinegar, and cakes.
+                Coffee is poured from the Kindred Blend, roasted locally.
               </p>
               <div className="mt-2">
                 <Link
